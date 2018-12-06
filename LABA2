@@ -1,0 +1,53 @@
+#include <iostream>
+using namespace std;
+
+class Employee {
+	private: int salary;
+	private: string name, surname;
+
+	public: Employee (int sal, string n, string sn ) 
+    {
+    	if (sal < 0) {
+    		sal = 0;
+    	} 
+
+        salary = sal;
+        name = n;
+        surname = sn ;
+    }
+
+    public: void setSalary(int sal) {
+    	salary = sal;
+    }
+	
+	public: void setSurname(string sn) {
+    	surname = sn;
+    }
+	
+	public: void setName(string n) {
+    	name = n;
+    }
+
+    public: int getSalary() {
+    	return salary;
+    }
+
+    public: string getSurname() {
+    	return surname;
+    }
+
+    public: string getName() {
+    	return name;
+    }
+
+};
+
+/*
+int main()
+  {
+    Employee o = Employee(100, "Olexandr", "Cherney");
+    o.setName("Sasha");
+    cout << o.getName();
+    return 0;
+  }
+*/
